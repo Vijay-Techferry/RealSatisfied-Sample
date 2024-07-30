@@ -1,0 +1,25 @@
+.style-0 {
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-bottom: 36.8px;
+    font-family: Lato, normal;
+    letter-spacing: normal;
+    box-sizing: border-box;
+}
+
+.style-1 {
+    font-family: Lato, normal;
+    letter-spacing: normal;
+    color: rgb(13, 110, 253);
+    text-decoration: underline solid rgb(13, 110, 253);
+    box-sizing: border-box;
+}
+
+.style-2 {
+    max-width: 90%;
+    height: 30px;
+    font-family: Lato, normal;
+    letter-spacing: normal;
+    vertical-align: middle;
+    box-sizing: border-box;
+}

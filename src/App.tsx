@@ -1,8 +1,16 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { routes } from './utilities/routes'
+import { routes, unAuthRoutes } from './utilities/routes'
+import { useState } from 'react';
 
 const browserRouter = createBrowserRouter(routes);
 
-const App = () => <RouterProvider router={browserRouter}/>
+const unAuthRouter = createBrowserRouter(unAuthRoutes);
+
+
+const App = () => {
+const [auth] = useState<boolean>(false);
+
+return auth?<RouterProvider router={browserRouter}/>:<RouterProvider router={unAuthRouter}/>
+}
 
 export default App
