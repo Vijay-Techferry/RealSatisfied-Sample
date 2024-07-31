@@ -34,7 +34,7 @@ const InputComp = ({
       </div>
       <Form.Control asChild className="formInput">
         {/* <span> */}
-        <input  type={inputType} value={inputValue} onChange={onChangeHandler} /> 
+        <input  type={inputType} value={inputValue} onChange={onChangeHandler}  placeholder={fieldName}/> 
         {/* <img src="https://stage-v2.realsatisfied.com/images/eye.svg" alt=""/> */}
         {/* </span> */}
       </Form.Control>

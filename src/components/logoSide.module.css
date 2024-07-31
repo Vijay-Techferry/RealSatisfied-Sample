@@ -1,0 +1,128 @@
+.logoTop{
+    box-sizing: border-box;
+    font-family: "Lato", normal;
+    letter-spacing: normal;
+    margin-top: 3rem;
+    margin-bottom: 16px;
+    margin-left: 0rem;
+    padding-left: 0rem;
+}
+
+.logoInner{
+    
+        box-sizing: border-box;
+        font-family: "Lato", normal;
+        letter-spacing: normal;
+        margin-bottom: 2.3rem;
+        margin-left: 0rem;
+        padding-left: 0rem;
+    }
+
+    .homeLink{
+            box-sizing: border-box;
+            font-family: "Lato", normal;
+            letter-spacing: normal;
+            margin-bottom: 2.3rem;
+            margin-left: 0rem;
+            padding-left: 0rem;
+        
+    }
+
+    .logoImg{
+            box-sizing: border-box;
+            vertical-align: middle;
+            font-family: "Lato", normal;
+            letter-spacing: normal;
+            height: 1.875rem;
+            max-width: 90%;
+    }
+
+    .welcomeStyle{
+        box-sizing: border-box;
+        margin-top: 0px;
+        line-height: 1.2;
+        font-family: 'Lato', normal;
+        color: #ffffff;
+        letter-spacing: 0.0625rem;
+        font-weight: 600;
+        font-size: 5dvw;
+        margin-bottom: 0px;
+      }
+    
+.heroText {
+  box-sizing: border-box;
+  letter-spacing: normal;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: #ffffff;
+  margin-top: 20px;
+}
+.heroImg{
+    box-sizing: border-box;
+    font-family: 'Lato', normal;
+    letter-spacing: normal;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(1.5rem * -0.5);
+    margin-top: 40px;
+    margin-left: 0rem;
+    padding-left: 0rem;
+  }
+
+  .girlContainer{
+    box-sizing: border-box;
+    font-family: "Lato", normal;
+    letter-spacing: normal;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    flex: 1 0 0%;
+    flex-shrink: 0;
+    padding-right: 0px;
+    margin-left: 0rem;
+    padding-left: 0rem;
+  }
+
+ .girlImg {
+    box-sizing: border-box;
+    vertical-align: middle;
+    font-family: 'Lato', normal;
+    letter-spacing: normal;
+    max-width: 100%;
+    min-width: 9.375rem;
+    margin-top: 50px;
+    margin-left: -0.9375rem;
+    height: 80%;
+  }
+  .ratingBox {
+    box-sizing: border-box;
+    font-family: "Lato", normal;
+    letter-spacing: normal;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    flex: 1 0 0%;
+    flex-shrink: 0;
+    padding-right: 0px;
+    margin-left: 0rem;
+    padding-left: 0rem;
+  }
+  .rating{
+    box-sizing: border-box;
+    vertical-align: middle;
+    font-family: 'Lato', normal;
+    letter-spacing: normal;
+    height: auto;
+    margin-left: -10rem;
+    min-width: 12.5rem;
+    max-width: 125%;
+    margin-top: 0rem;
+  }
+
+  @media screen and (max-width:1000px) {
+    .ratingBox {
+     display: none;
+    }
+  }

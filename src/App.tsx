@@ -10,7 +10,7 @@ const unAuthRouter = createBrowserRouter(unAuthRoutes);
 const App = () => {
 const [auth] = useState<boolean>(false);
 
-return auth?<RouterProvider router={browserRouter}/>:<RouterProvider router={unAuthRouter}/>
+return<RouterProvider router={ auth?browserRouter:unAuthRouter}/>
 }
 
 export default App

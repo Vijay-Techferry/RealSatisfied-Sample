@@ -17,7 +17,7 @@ const RadixLoginCard = () => {
 
     const listOfInputs = [{fieldName:"Email Address",inputType:"email",inputValue:emailValue,onChangeHandler:emailChangeHandler},{fieldName:"Password",inputType:"password",inputValue:password,onChangeHandler:passwordChangeHandler}]
 
-    const listOfSSOBtns = [{ buttonName:"Log in with Facebook",imgIcon:"https://stage-v2.realsatisfied.com/version/01.98/images/new_r2/icon-fb.svg" ,imgAltText:"" },{ buttonName:"Log in with Google",imgIcon:"https://stage-v2.realsatisfied.com/version/01.98/images/new_r2/icon-fb.svg" ,imgAltText:"" },];
+    const listOfSSOBtns = [{ buttonName:"Log in with Facebook",imgIcon:"https://stage-v2.realsatisfied.com/version/01.98/images/new_r2/icon-fb.svg" ,imgAltText:"" },{ buttonName:"Log in with Google",imgIcon:"https://app.realsatisfied.com/version/01.98/images/new_r2/icon-google.svg" ,imgAltText:"" },];
     
   return (
       <Card className="form-signin">
@@ -31,7 +31,7 @@ const RadixLoginCard = () => {
             Sign Up
           </span>
         </div>
-        {_.map(listOfInputs,(inp:any)=><InputComp fieldName={inp?.fieldName} helperText={""} inputType={inp?.inputType} inputValue={inp?.inputValue} onChangeHandler={inp?.onChangeHandler}/>)}
+        {_.map(listOfInputs,(inp:any)=><InputComp key={inp?.fieldName} fieldName={inp?.fieldName} helperText={""} inputType={inp?.inputType} inputValue={inp?.inputValue} onChangeHandler={inp?.onChangeHandler}/>)}
         <div>
             <span>Forgot Password Section</span>
         </div>
@@ -43,7 +43,7 @@ const RadixLoginCard = () => {
                 or
             </div>
             <div>
-{_.map(listOfSSOBtns,(btn:any)=><CommonButton buttonName={btn?.buttonName} imgIcon={btn?.imgIcon} imgAltText={""} btnClassName="outliner"/>)}
+{_.map(listOfSSOBtns,(btn:any)=><CommonButton buttonName={btn?.buttonName} key={btn?.buttonName} imgIcon={btn?.imgIcon} imgAltText={""} btnClassName="outliner"/>)}
             </div>
 
         </div>
