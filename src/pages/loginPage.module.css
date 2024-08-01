@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: 60% 40%;
     background: url("https://app.realsatisfied.com/images/new_r2/login_bg.png") center -225px / cover no-repeat;
-    padding-right: 6rem;
-    padding-left: 6rem;
+    padding-right: 8rem;
+    padding-left: 7.5rem;
 }
 
 
@@ -12,3 +12,12 @@
         background: url("https://app.realsatisfied.com/images/new_r2/login_bg.png") ;
         grid-template-columns: 40% 60%;
     }}
+
+    @media screen and (max-width:660px) {
+       .loginContainer{
+        display: flex;
+        padding-left: 1.25rem;
+        padding-right: 0rem;
+        padding-top: 2.25rem;
+    }
+    }

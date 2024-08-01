@@ -8,6 +8,12 @@
     padding-left: 0rem;
 }
 
+@media screen and (max-width:600px) {
+  .logoTop {
+    display:none;
+  }
+}
+
 .logoInner{
     
         box-sizing: border-box;

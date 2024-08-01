@@ -1,44 +1,60 @@
 import * as Form from "@radix-ui/react-form";
-import "./loginCard.css"
+import "./loginCard.css";
 import { Fragment } from "react/jsx-runtime";
 
-
+export interface InputCompProp {
+  fieldName: string;
+  inputType: string;
+  inputValue: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onChangeHandler: (e: any) => void;
+  inputImgData?: {
+    src: string;
+    inputImgAltText: string;
+    imgClickHandler:()=>void;
+    fromLeft?: string;
+    fromRight?: string;
+  };
+  inputPlaceholder?: string;
+}
 const InputComp = ({
   fieldName,
-  helperText,
   inputType,
   inputValue,
-  onChangeHandler
-}: {
-  fieldName: string;
-  helperText: string;
-  inputType: string;
-  inputValue:string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onChangeHandler:(e:any)=>void
-}) => {
+  onChangeHandler,
+  inputImgData,
+  inputPlaceholder,
+  
+}:InputCompProp ) => {
   return (
     <Form.Root className="formRootClass">
-    <Form.Field className="FormField" name={fieldName}>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "baseline",
-          justifyContent: "space-between",
-        }}
-      >
+      <Form.Field className="FormField" name={fieldName}>
         <Form.Label className="FormLabel">{fieldName}</Form.Label>
-        <Form.Message className="FormMessage" match="valueMissing">
-          {helperText}
-        </Form.Message>
-      </div>
-      <Form.Control asChild className="formInput">
-        {/* <span> */}
-        <input  type={inputType} value={inputValue} onChange={onChangeHandler}  placeholder={fieldName}/> 
-        {/* <img src="https://stage-v2.realsatisfied.com/images/eye.svg" alt=""/> */}
-        {/* </span> */}
-      </Form.Control>
-    </Form.Field>
+        <div style={{ display: "flex", position: "relative" }}>
+          <input
+            className="formInput"
+            type={inputType}
+            value={inputValue}
+            onChange={onChangeHandler}
+            placeholder={inputPlaceholder}
+          />
+          {inputImgData?.src && (
+            <img
+              style={{
+                position: "absolute",
+                right: inputImgData?.fromRight ?? "10px",
+                left: inputImgData?.fromLeft  ?? "",
+                alignSelf: "center",
+                zIndex: "10",
+                cursor: "pointer",
+              }}
+              onClick={inputImgData?.imgClickHandler}
+              src={inputImgData?.src}
+              alt={inputImgData?.inputImgAltText}
+            />
+          )}
+        </div>
+      </Form.Field>
     </Form.Root>
   );
 };

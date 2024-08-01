@@ -5,7 +5,6 @@ export default function LogoC() {
   return (
     <>
       <div
-        id="login-left-container"
         className={styles.logoTop}>
         <div
           className={styles.logoInner}

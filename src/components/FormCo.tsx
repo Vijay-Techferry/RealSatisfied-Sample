@@ -1,121 +1,44 @@
-import React from "react";
-
+import styles from "./fomco.module.css";
 export default function LoginCard() {
   return (
     <>
       <div
-        className="form-signin px-4 py-4 d-flex m-auto ms-md-1 me-md-5"
-        style={{
-          boxSizing: "border-box",
-          fontFamily: '"Lato", normal',
-          letterSpacing: "normal",
-          background: "rgb(255, 255, 255)",
-          borderRadius: "0.375rem",
-          boxShadow:
-            "rgba(16, 24, 40, 0.1) 0px 0.625rem 0.9375rem -0.1875rem, rgba(16, 24, 40, 0.1) 0rem 0.25rem 0.375rem -0.25rem",
-          backgroundColor: "white",
-          display: "flex",
-          margin: "auto",
-          paddingRight: "1.5rem",
-          paddingLeft: "1.5rem",
-          paddingTop: "1.5rem",
-          paddingBottom: "1.5rem",
-          minWidth: "26.875rem",
-          maxWidth: "29.375rem",
-          marginRight: "0rem",
-          marginLeft: "0rem",
-        }}
+        className={styles.formHeader}
       >
         <div
-          className="mx-2"
-          style={{
-            boxSizing: "border-box",
-            fontFamily: '"Lato", normal',
-            letterSpacing: "normal",
-            marginRight: "0.5rem",
-            marginLeft: "0.5rem",
-          }}
+          className={styles.formSubHeader}
+          
         >
           <h2
-            className="mb-3 mt-2 login-text"
-            style={{
-              boxSizing: "border-box",
-              lineHeight: 1.2,
-              fontFamily: '"Lato", normal',
-              letterSpacing: "normal",
-              color: "rgb(23, 28, 39)",
-              fontSize: "2.25rem",
-              fontWeight: 600,
-              marginTop: "0.5rem",
-              marginBottom: "1rem",
-            }}
+            className={styles.loginText}
+            
           >
             Log In
           </h2>
           <p
-            className="pt-1"
-            style={{
-              boxSizing: "border-box",
-              marginTop: "0px",
-              marginBottom: "1rem",
-              fontFamily: '"Lato", normal',
-              letterSpacing: "normal",
-              fontSize: "1rem",
-              color: "rgb(36, 44, 55)",
-              fontWeight: 400,
-              paddingTop: "0.25rem",
-            }}
+            className={styles.needSatisfied}
+            
           >
             Need a RealSatisfied account?{" "}
             <a
-              className="sign-up ms-2"
+              className={styles.signUp}
               href="http://app.realsatisfied.com/sign_up"
-              style={{
-                boxSizing: "border-box",
-                letterSpacing: "normal",
-                textDecoration: "none",
-                fontFamily: '"Lato"',
-                fontStyle: "normal",
-                fontWeight: 600,
-                fontSize: "1rem",
-                color: "rgb(27, 74, 128)",
-                marginLeft: "0.5rem",
-              }}
+              
             >
               Sign Up
             </a>
           </p>
           <div
-            id="error_dialog"
-            className="alert alert-danger d-none align-items-center"
+            className={styles.errorDialog}
             role="alert"
-            style={{
-              boxSizing: "border-box",
-              fontFamily: '"Lato", normal',
-              letterSpacing: "normal",
-              padding: "1rem",
-              position: "relative",
-              border: "medium",
-              marginBottom: "0rem",
-              display: "none",
-              alignItems: "center",
-              borderColor: "rgb(251, 217, 218)",
-              borderRadius: "6px",
-              color: "rgb(23, 28, 39)",
-              backgroundColor: "rgb(251, 217, 218)",
-            }}
+           
           >
             <img
               height={20}
               width={20}
               alt="info"
               src="https://app.realsatisfied.com/version/01.98/images/info.svg"
-              style={{
-                boxSizing: "border-box",
-                verticalAlign: "middle",
-                fontFamily: '"Lato", normal',
-                letterSpacing: "normal",
-              }}
+              className={styles.infoDialog}
             />
             <p
               id="error_msg"

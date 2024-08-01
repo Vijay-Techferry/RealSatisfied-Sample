@@ -1,5 +1,4 @@
-import LandingPage from "../pages/LandingPage";
-import LoginPage from "../pages/LoginPage";
+import { LandingPage,LoginPage } from ".";
 
 export const routes = [{path:"/",element:<LandingPage/>,children:[],errorElement:<div>Not Found</div>}];
 
