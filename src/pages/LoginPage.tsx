@@ -1,10 +1,7 @@
-import { useLayoutEffect } from "react";
-import RadixLoginCard from "../components/RadixLoginCard";
+import { lazy, useLayoutEffect } from "react";
+const LoginCard = lazy(() => import("../components/RadixLoginCard"));
 import styles from "./loginPage.module.css";
-// import LoginLogo from "../components/LoginLogo";
-// import LoginCard from "../components/FormCo";
-import LogoC from "../components/LogoC";
-// import Header from "../components/Header";
+const Logo = lazy(() => import("../components/LogoC"));
 
 const LoginPage = () => {
   useLayoutEffect(() => {
@@ -12,8 +9,8 @@ const LoginPage = () => {
   }, []);
   return (
     <div className={styles.loginContainer}>
-      <LogoC/>
-      <RadixLoginCard />
+      <Logo />
+      <LoginCard />
     </div>
   );
 };

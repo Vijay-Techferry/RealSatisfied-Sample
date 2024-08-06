@@ -1,4 +1,4 @@
-.primary{
+.primary {
     height: 3rem;
     border-radius: 0.375rem;
     font-family: 'Lato';
@@ -14,7 +14,7 @@
     padding: 0.375rem 0.75rem;
     display: flex;
     justify-content: center;
-    align-items:center ;
+    align-items: center;
     cursor: pointer;
 }
 
@@ -23,12 +23,12 @@
     border-color: #2EAB75;
 }
 
-.stdImg{
+.stdImg {
     margin-right: 10px;
-    margin-top:3px;
+    margin-top: 3px;
 }
 
-.outliner{    
+.outliner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,12 +42,25 @@
     border: 1px solid #D7D9DB;
     color: #4F5763;
     margin-top: 1rem;
-    margin-bottom:1.5rem;
+    margin-bottom: 1.5rem;
     width: 100%;
 }
 
-.outliner:hover{
+.outliner:hover {
     background: #D7D9DB;
     border-color: #D7D9DB;
     color: #4F5763;
+}
+
+.addBtn {
+    width: Hug (160px)px;
+    height: Fixed (40px)px;
+    top: 96px;
+    left: 1248px;
+    padding: 8px 16px 8px 14px;
+    gap: 8px;
+    border-radius: 6px 0px 0px 0px;
+    opacity: 0px;
+    background: #3BB882;
+    color: #FFFFFF;
 }

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./logoSide.module.css"
+import starGirl from "../assets/star-girl.svg";
 
 export default function LogoC() {
   return (
@@ -46,8 +47,8 @@ export default function LogoC() {
           >
             <img
               className={styles.girlImg}
-              src="https://app.realsatisfied.com/version/01.98/images/star-girl.svg"
-              
+              src={starGirl}
+              alt="startGirl"
             />
           </div>
           <div

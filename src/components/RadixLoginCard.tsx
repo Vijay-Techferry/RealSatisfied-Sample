@@ -3,7 +3,6 @@ import { Card } from "@radix-ui/themes";
 import "./loginCard.css";
 import InputComp, { InputCompProp } from "./InputComp";
 import { useState } from "react";
-import _ from "lodash";
 import CommonButton from "./CommonButton";
 import LinkText from "./LinkText";
 import { useDispatch } from "react-redux";
@@ -66,7 +65,7 @@ const RadixLoginCard = () => {
           <span className="needAccount">Need a RealSatisfied account? </span>
           <LinkText btnClickHandler={() => alert("Yet")} btnName="Sign Up" />
         </div>
-        {_.map(listOfInputs, (inp: any) => (
+        {listOfInputs?.length > 0 && listOfInputs.map((inp: any) => (
           <InputComp
             key={inp?.fieldName}
             fieldName={inp?.fieldName}
@@ -104,16 +103,16 @@ const RadixLoginCard = () => {
         </div>
         <div className="divider">or</div>
         <div>
-          {_.map(listOfSSOBtns, (btn: any) => (
-            <CommonButton
-              buttonName={btn?.buttonName}
-              key={btn?.buttonName}
-              imgIcon={btn?.imgIcon}
-              imgAltText={""}
-              btnClassName="outliner"
-              btnClickHandler={btn?.btnClickHandler}
-            />
-          ))}
+        {listOfSSOBtns?.length > 0 && listOfSSOBtns.map((btn: any) => (
+          <CommonButton
+          buttonName={btn?.buttonName}
+          key={btn?.buttonName}
+          imgIcon={btn?.imgIcon}
+          imgAltText={""}
+          btnClassName="outliner"
+          btnClickHandler={btn?.btnClickHandler}
+        />
+        ))}
         </div>
         <div>
           <span className="services">
